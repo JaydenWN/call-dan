@@ -1,0 +1,28 @@
+---
+const { name, link } = Astro.props;
+import locationPin from "@icons/location-pin.svg";
+import { Image } from "astro:assets";
+---
+
+<div class="location">
+    <a href={link}>
+        <Image src={locationPin} alt={`${name} handyman service`} />
+        {name}
+    </a>
+</div>
+
+<style>
+    .location {
+        border: 1px solid var(--dark);
+        padding: 1rem;
+        border-radius: 6px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+</style>

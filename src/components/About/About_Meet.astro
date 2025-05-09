@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import placeholder from "@images/placeholder.png";
+---
+
+<section class="about">
+    <div class="container">
+        <h2>Meet Dan, Your Local Handyman</h2>
+        <p>
+            Call Dan began with one simple goal in mind. Dan wanted to provide
+            straightforward and affordable handyman services to homeowners and
+            businesses across South West Sydney. After recognising the need for
+            trustworthy handyman services in areas like Penrith, Campbelltown,
+            and Liverpool, Dan built the business on reliability, fair pricing,
+            and quality workmanship. Over the years, locals have come to count
+            on Call Dan for everything from gutter cleaning and mould removal to
+            fixing leaky taps and window cleaning. Today, the business continues
+            to grow through genuine referrals and satisfied repeat customers,
+            making Call Dan a trusted name in local handyman services.
+        </p>
+        <Image
+            src={placeholder}
+            alt="handyman south sydney"
+            class="about-image"
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+    }
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+    .about-image {
+        width: 100%;
+        height: auto;
+    }
+</style>

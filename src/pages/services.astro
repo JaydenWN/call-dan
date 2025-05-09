@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Base_Layout.astro";
+import SubpageHero from "../components/common/Subpage_Hero.astro";
+import ServiceList from "../components/Services/Service_List.astro";
+import ServiceFAQ from "../components/Services/Service_FAQ.astro";
+import ServiceCTA from "../components/Services/Service_CTA.astro";
+import ServiceForm from "../components/Services/Service_Form.astro";
+---
+
+<Layout title="Call Dan | Services" description="Lorem ipsum dolor sit amet">
+    <SubpageHero
+        title="Our Handyman Services in South West Sydney"
+        subtitle="Quality handyman solutions for every job, big or small. Proudly serving homeowners and businesses across your local area."
+    />
+    <ServiceList />
+    <ServiceFAQ />
+    <ServiceCTA />
+    <ServiceForm />
+</Layout>

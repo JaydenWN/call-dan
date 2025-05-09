@@ -1,0 +1,62 @@
+---
+import one from "@icons/one.svg";
+import two from "@icons/two.svg";
+import three from "@icons/three.svg";
+import four from "@icons/four.svg";
+import { Image } from "astro:assets";
+---
+
+<section>
+    <div class="container">
+        <h2>Our Core Values</h2>
+        <div class="values">
+            <div class="value-card">
+                <Image src={one} alt="handyman value one" />
+                <p>Transparent pricing with no hidden costs</p>
+            </div>
+
+            <div class="value-card">
+                <Image src={two} alt="handyman value one" />
+                <p>Reliable service that’s always on time</p>
+            </div>
+
+            <div class="value-card">
+                <Image src={three} alt="handyman value one" />
+                <p>High quality workmanship guaranteed</p>
+            </div>
+
+            <div class="value-card">
+                <Image src={four} alt="handyman value one" />
+                <p>Friendly, clear communication from start to finish</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    h2 {
+        font-size: 1.65rem;
+    }
+    section {
+        background-color: var(--dark);
+        color: white;
+    }
+    .values {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .value-card {
+        border-left: 1px solid var(--gold);
+        padding: 0px 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-weight: 700;
+    }
+</style>

@@ -1,0 +1,30 @@
+---
+import LandingTestimonialCard from "./Landing_Testimonial_Card.astro";
+---
+
+<section>
+    <div class="container">
+        <h2>Testimonials</h2>
+        <LandingTestimonialCard
+            quote="What sets Daniel apart from others is his readiness to assist at a moment’s notice. He is also very efficient in his work. I would trust Daniel for any job that my dad used to do for or with me."
+            quotee="Rahadian Supriatna"
+        />
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--dark);
+    }
+
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+</style>

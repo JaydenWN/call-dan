@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import facebookIcon from "@icons/facebook.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Follow Call Dan on social media</h2>
+        <p>
+            Keep in touch with Call Dan on Facebook and stay updated with our
+            latest handyman tips, news, and service specials.
+        </p>
+
+        <div class="social-link">
+            <Image src={facebookIcon} alt="handy man sydney facebook" />
+            <a href="https://www.facebook.com/calldan2day">Facebook</a>
+            <p>Give our facebook a visit! Don’t forget to drop a like!</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+    .social-link {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    .social-link a {
+        font-size: 1.35rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--gold);
+        font-weight: 600;
+    }
+</style>

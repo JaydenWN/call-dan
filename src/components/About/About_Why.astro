@@ -1,0 +1,84 @@
+---
+import { Image } from "astro:assets";
+import medal from "@icons/medal.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Why Choose Call Dan?</h2>
+        <p>
+            When it comes to handyman services in South West Sydney, choosing
+            Call Dan means choosing reliability, quality, and genuine local
+            expertise. We're committed to making home maintenance and repairs
+            simple and stress free for you and your family.
+        </p>
+        <div class="why-cards">
+            <div class="why-card">
+                <Image src={medal} alt="quality handyman service sydney" />
+                <h3>Local Knowledge You Can Trust</h3>
+                <p>
+                    Dan knows South West Sydney inside out. He understands
+                    exactly what local homeowners and businesses expect from
+                    their handyman, delivering services that perfectly match
+                    your needs.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <Image src={medal} alt="quality handyman service sydney" />
+                <h3>Affordable and Honest Pricing</h3>
+                <p>
+                    We believe great handyman services shouldn't break the bank.
+                    With transparent pricing and affordable rates, Call Dan
+                    delivers real value every time.
+                </p>
+            </div>
+
+            <div class="why-card">
+                <Image src={medal} alt="quality handyman service sydney" />
+                <h3>Same Day Service Available</h3>
+                <p>
+                    Need urgent help? Call Dan for prompt, same day handyman
+                    services when unexpected issues arise. We're here to help
+                    when you need it most.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        color: white;
+        background-color: var(--dark);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2,
+    h3 {
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: 1.65rem;
+    }
+    h3 {
+        text-align: center;
+    }
+    .why-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .why-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.6rem;
+        border: 1px solid rgba(255, 255, 255, 0.233);
+        border-radius: 6px;
+    }
+</style>

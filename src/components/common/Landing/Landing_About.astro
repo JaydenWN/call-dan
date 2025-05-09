@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import placeholder from "@images/placeholder.png";
+---
+
+<section class="about">
+    <div class="container">
+        <h2>About Call Dan</h2>
+        <p>
+            At Call Dan, we provide reliable handyman services to homeowners and
+            businesses right across South West Sydney. Whether you need window
+            cleaning, fly screen replacement or repairs around the house, Dan is
+            ready to get the job done promptly and professionally.
+        </p>
+        <Image
+            src={placeholder}
+            alt="handyman south sydney"
+            class="about-image"
+        />
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        color: white;
+    }
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+    .about-image {
+        width: 100%;
+        height: auto;
+    }
+</style>

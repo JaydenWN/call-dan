@@ -1,0 +1,96 @@
+---
+import ServiceCard from "./Service_Card.astro";
+import MouldIcon from "@icons/mould-removal-white.svg";
+import WindowIcon from "@icons/window-cleaning-white.svg";
+import FlyIcon from "@icons/fly-screen-white.svg";
+import WeldIcon from "@icons/welding-white.svg";
+import GutterIcon from "@icons/gutter-cleaning-white.svg";
+import placeholder from "@images/placeholder.png";
+---
+
+<section class="service-list">
+    <div class="container">
+        <ServiceCard
+            icon={MouldIcon}
+            img={placeholder}
+            title="Mould Removal"
+            text="Mould doesn't just look unsightly, it can affect your health and damage your property. Call Dan for effective mould removal services that leave your home clean, fresh, and safe for your family."
+            reasons={[
+                "Fast, thorough mould treatment",
+                "Safe, family friendly methods",
+                "Protect your health and property",
+                "Local and reliable handyman",
+            ]}
+            cta="Request a Mould Removal Quote"
+        />
+    </div>
+    <div class="container">
+        <ServiceCard
+            icon={WindowIcon}
+            img={placeholder}
+            title="Window Cleaning"
+            text="Sparkling clean windows make a huge difference to the appearance of your home or office. Call Dan provides professional window cleaning services for spotless, streak free results every time."
+            reasons={[
+                "Professional cleaning equipment",
+                "Careful attention to detail",
+                "Quick and convenient service",
+                "Affordable local prices",
+            ]}
+            cta="Request a Window Clean Quote"
+        />
+    </div>
+
+    <div class="container">
+        <ServiceCard
+            icon={WeldIcon}
+            img={placeholder}
+            title="Welding"
+            text="Need reliable welding repairs around your home or commercial space? Call Dan handles welding tasks quickly, safely, and professionally, ensuring structural integrity and peace of mind."
+            reasons={[
+                "Expert welding services",
+                "Safe and durable results",
+                "Prompt, reliable response",
+                "Friendly local handyman",
+            ]}
+            cta="Request a Welding Quote"
+        />
+    </div>
+
+    <div class="container">
+        <ServiceCard
+            icon={FlyIcon}
+            img={placeholder}
+            title="Fly Screen Replacement"
+            text="Sparkling clean windows make a huge difference to the appearance of your home or office. Call Dan provides professional window cleaning services for spotless, streak free results every time."
+            reasons={[
+                "Professional cleaning equipment",
+                "Careful attention to detail",
+                "Quick and convenient service",
+                "Affordable local prices",
+            ]}
+            cta="Get a quote now"
+        />
+    </div>
+
+    <div class="container">
+        <ServiceCard
+            icon={GutterIcon}
+            img={placeholder}
+            title="Gutter Cleaning"
+            text="Blocked gutters can lead to costly water damage and leaks. Call Dan provides reliable gutter cleaning to keep your home protected and your gutters flowing freely."
+            reasons={[
+                "Complete gutter clearing and debris removal",
+                "Protect your roof and property",
+                "Quick, hassle free service",
+                "Local handyman you can trust",
+            ]}
+            cta="Get a quote now"
+        />
+    </div>
+</section>
+
+<style>
+    .service-list .container:nth-of-type(even) {
+        background-color: var(--dark);
+    }
+</style>

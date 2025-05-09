@@ -1,0 +1,102 @@
+---
+import { Image } from "astro:assets";
+import one from "@icons/one.svg";
+import two from "@icons/two.svg";
+import three from "@icons/three.svg";
+import four from "@icons/four.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>What Matters Most at Call Dan</h2>
+        <p>
+            At Call Dan, we believe that great service begins with strong
+            values. Our commitment to honesty, reliability, and quality guides
+            everything we do. Every job, from fly screen replacement to welding
+            repairs, receives the same care and attention to detail. We respect
+            your time, budget, and home, always delivering service with a smile.
+            For handyman work done right the first time, Call Dan is your
+            trusted local choice.
+        </p>
+
+        <div class="values">
+            <div class="value-card">
+                <div class="card-header">
+                    <Image src={one} alt="handyman value one" />
+                    <p>Transparent pricing with no hidden costs</p>
+                </div>
+                <p>
+                    We provide clear, upfront quotes so you know exactly what to
+                    expect, with no surprises on your final bill.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="card-header">
+                    <Image src={two} alt="handyman value one" />
+                    <p>Reliable service that’s always on time</p>
+                </div>
+                <p>
+                    When we say we’ll be there, you can count on it because we
+                    respect your time and schedule.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="card-header">
+                    <Image src={three} alt="handyman value one" />
+                    <p>High quality workmanship guaranteed</p>
+                </div>
+                <p>
+                    Every job we complete meets the highest standards, ensuring
+                    your handyman tasks are done properly and built to last.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <div class="card-header">
+                    <Image src={four} alt="handyman value one" />
+                    <p>Friendly, clear communication from start to finish</p>
+                </div>
+                <p>
+                    We keep you updated every step of the way, always ready to
+                    answer questions and ensure you're happy with our service.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        color: white;
+        background-color: var(--dark);
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .values {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .value-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .card-header {
+        border-left: 1px solid var(--gold);
+        padding: 0px 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-weight: 700;
+    }
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+</style>

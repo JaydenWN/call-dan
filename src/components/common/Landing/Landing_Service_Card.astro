@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+const { icon, title } = Astro.props;
+---
+
+<div class="service-card">
+    <Image src={icon} alt={title} />
+    <h3>{title}</h3>
+    <slot />
+</div>
+
+<style>
+    .service-card {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem;
+        border: 1px solid var(--dark);
+        border-radius: 6px;
+    }
+    h3 {
+        text-transform: uppercase;
+    }
+</style>

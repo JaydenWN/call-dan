@@ -1,0 +1,66 @@
+---
+import emailIcon from "@icons/email-yellow.svg";
+import phoneIcon from "@icons/phone-yellow.svg";
+import { Image } from "astro:assets";
+---
+
+<section>
+    <div class="container">
+        <h2>Rather talk to a sydney based Handyman directly?</h2>
+        <p>
+            We’re always happy to chat about your handyman needs. Give Dan a
+            quick call or send us an email for fast, friendly help.
+        </p>
+
+        <div class="contact-info">
+            <div class="info-box">
+                <Image src={emailIcon} alt="sydney handyman email" />
+                <h3>Email</h3>
+                <a href="">info@calldan.com.au</a>
+            </div>
+
+            <div class="info-box">
+                <Image src={phoneIcon} alt="sydney handyman phone" />
+                <h3>Phone</h3>
+                <a href="">+61 478 847 190</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.65rem;
+    }
+
+    h3 {
+        text-transform: uppercase;
+    }
+
+    .info-box {
+        padding: 1rem;
+        border: 1px solid var(--dark);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+</style>

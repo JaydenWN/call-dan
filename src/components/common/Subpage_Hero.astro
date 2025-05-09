@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+const { title, subtitle } = Astro.props;
+import callIcon from "@icons/call.svg";
+import messageIcon from "@icons/tick-message.svg";
+import SecondaryButton from "./Secondary_Button.astro";
+import PrimaryButton from "./Primary_Button.astro";
+---
+
+<section class="hero">
+    <div class="container">
+        <h1>{title}</h1>
+        <p>
+            {subtitle}
+        </p>
+        <div class="cta-buttons">
+            <SecondaryButton icon={callIcon} href="tel:040"
+                >Call Dan</SecondaryButton
+            >
+            <PrimaryButton href="/contact/#contact-form" icon={messageIcon}
+                >Request Quote</PrimaryButton
+            >
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        background-color: var(--dark);
+    }
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .hero h1 {
+        color: var(--gold);
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    .hero p {
+        color: white;
+    }
+    .cta-buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
+</style>

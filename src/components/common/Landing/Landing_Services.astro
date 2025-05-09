@@ -1,0 +1,86 @@
+---
+import LandingServiceCard from "./Landing_Service_Card.astro";
+import mouldRemoval from "@icons/mould-removal.svg";
+import windowCleaning from "@icons/window-cleaning.svg";
+import welding from "@icons/welding.svg";
+import flyScreen from "@icons/fly-screen.svg";
+import gutterCleaning from "@icons/gutter-cleaning.svg";
+import leakyTap from "@icons/leaky-tap.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="service-cards">
+            <LandingServiceCard title="Mould Removal" icon={mouldRemoval}>
+                <p>
+                    Keep your home clean and safe with professional mould
+                    removal from Call Dan. We quickly identify and treat mould
+                    problems to protect your family's health and your property's
+                    value.
+                </p>
+            </LandingServiceCard>
+
+            <LandingServiceCard title="Window Cleaning" icon={windowCleaning}>
+                <p>
+                    Call Dan for sparkling clean windows every time. We provide
+                    thorough, streak free window cleaning services that
+                    instantly boost the look and feel of your home.
+                </p>
+            </LandingServiceCard>
+
+            <LandingServiceCard title="Welding" icon={welding}>
+                <p>
+                    Need reliable welding repairs around the home or business?
+                    Dan provides prompt and precise welding solutions to keep
+                    your property safe and functional.
+                </p>
+            </LandingServiceCard>
+
+            <LandingServiceCard title="Fly Screen Replacement" icon={flyScreen}>
+                <p>
+                    Damaged fly screens letting unwanted pests inside? Call Dan
+                    for fast and affordable fly screen replacement across South
+                    West Sydney.
+                </p>
+            </LandingServiceCard>
+
+            <LandingServiceCard title="Gutter Cleaning" icon={gutterCleaning}>
+                <p>
+                    Damaged fly screens letting unwanted pests inside? Call Dan
+                    for fast and affordable fly screen replacement across South
+                    West Sydney.
+                </p>
+            </LandingServiceCard>
+
+            <LandingServiceCard title="Leaky Taps" icon={leakyTap}>
+                <p>
+                    A leaky tap isn't just annoying, it wastes water and money.
+                    Call Dan for affordable, quick fixes to leaky taps and
+                    dripping faucets in kitchens, bathrooms, and laundries.
+                </p>
+            </LandingServiceCard>
+        </div>
+    </div>
+</section>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    section {
+        background-color: var(--darker);
+    }
+    .service-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+</style>

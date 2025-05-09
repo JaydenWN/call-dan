@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import stars from "@icons/stars.svg";
+import quotemark from "@icons/quote.svg";
+const { quote, quotee } = Astro.props;
+---
+
+<div class="testimonial-card">
+    <div class="testimonial-header">
+        <Image src={quotemark} alt="handyman testimonial quote" />
+        <p>- {quotee}</p>
+    </div>
+    <blockquote>
+        {quote}
+    </blockquote>
+    <Image src={stars} alt="five-star handyman service" class="stars" />
+</div>
+
+<style>
+    .testimonial-card {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.65rem;
+        border: 1px solid rgba(255, 255, 255, 0.247);
+        border-radius: 6px;
+    }
+    .testimonial-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    blockquote {
+        line-height: 200%;
+    }
+    .stars {
+        align-self: center;
+    }
+</style>

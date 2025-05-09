@@ -1,0 +1,123 @@
+---
+
+---
+
+<section>
+    <div class="container">
+        <h2 id="faq-heading">FAQ</h2>
+
+        <div class="faq">
+            <details class="faq-item">
+                <summary
+                    >Can Call Dan handle multiple handyman jobs in one visit?</summary
+                >
+                <p>
+                    Yes, absolutely. We encourage you to group jobs together as
+                    it saves you both time and money. Call Dan is fully equipped
+                    to handle several handyman tasks in one convenient visit.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I get a quote for handyman services?</summary>
+                <p>
+                    Simply fill out our contact form or give us a call directly.
+                    We provide free, no obligation quotes quickly, tailored to
+                    your specific handyman needs.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary
+                    >Does Call Dan provide same day handyman services?</summary
+                >
+                <p>
+                    We certainly do. If your job is urgent, contact us
+                    immediately and we'll do our best to assist you with same
+                    day handyman service
+                </p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<style>
+    section#faq {
+        background-color: #000; /* Black background */
+        padding: 3rem 1rem;
+        color: #fff; /* Default text color */
+    }
+
+    section#faq .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    #faq-heading {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+        color: #ffd600; /* Yellow accent for heading */
+    }
+
+    /* FAQ items grid */
+    .faq {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Each accordion panel */
+    .faq-item {
+        border: 1px solid #949494; /* Dark grey border */
+        border-radius: 6px;
+        overflow: hidden;
+        background-color: transparent;
+    }
+
+    /* Summary (the question) */
+    .faq-item summary {
+        list-style: none; /* remove default marker */
+        cursor: pointer;
+        padding: 1rem 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        user-select: none;
+    }
+
+    /* Hide the browser’s default marker */
+    .faq-item summary::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Custom arrow icon */
+    .faq-item summary::after {
+        content: "▾"; /* down-caret */
+        font-size: 2rem;
+        color: #ffd600;
+        transition: transform 0.3s ease;
+    }
+
+    /* Rotate arrow when open */
+    .faq-item[open] summary::after {
+        transform: rotate(180deg);
+    }
+
+    /* The answer text */
+    .faq-item p {
+        padding: 0 1.25rem 1rem;
+        color: #ddd;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    summary {
+        line-height: 165%;
+    }
+    section {
+        background-color: var(--dark);
+    }
+</style>

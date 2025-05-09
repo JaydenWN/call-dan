@@ -1,0 +1,62 @@
+---
+import LocationCard from "./Location_Card.astro";
+---
+
+<section>
+    <div class="container">
+        <h2>Proudly Providing Handyman Services Across South West Sydney</h2>
+        <p>
+            Call Dan is proud to offer fast, affordable, and professional
+            handyman services across South West Sydney. Wherever you are in our
+            service areas, we're just a phone call away and ready to assist with
+            your home maintenance or repair tasks.
+        </p>
+
+        <div class="locations">
+            <LocationCard
+                name="Penrith"
+                link="https://maps.app.goo.gl/MucQwtEMCBAbzrxJA"
+            />
+            <LocationCard
+                name="St Marys"
+                link="https://maps.app.goo.gl/F1czGSR1foRVNke17"
+            />
+            <LocationCard
+                name="Mount Druitt"
+                link="https://maps.app.goo.gl/geeggXimdurmRhTA8"
+            />
+            <LocationCard
+                name="Parramatta"
+                link="https://maps.app.goo.gl/AnMvdvrudyGMP5PY7"
+            />
+            <LocationCard
+                name="Merrylands"
+                link="https://maps.app.goo.gl/gquiGkC6pceX5we7A"
+            />
+            <LocationCard
+                name="Fairfield"
+                link="https://maps.app.goo.gl/gquiGkC6pceX5we7A"
+            />
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        color: white;
+    }
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .locations {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+</style>

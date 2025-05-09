@@ -1,0 +1,59 @@
+---
+import { Image } from "astro:assets";
+import quote from "@icons/quote.svg";
+---
+
+<section>
+    <div class="container">
+        <h2>Why Choose Us For your Handyman Jobs</h2>
+        <p>
+            Choosing Call Dan means choosing a local handyman who genuinely
+            cares. We understand what South West Sydney residents value most and
+            we always go the extra mile to ensure complete satisfaction. Our
+            customers from Penrith to Campbelltown and Liverpool to Parramatta
+            rely on us for consistent, quality service every time.
+
+            <div class="testimonial">
+                <Image src={quote} alt={"handyman sydney testimonial"} />
+                <blockquote>
+                    What sets Daniel apart from others is his readiness to
+                    assist at a moment’s notice. He is also very efficient in
+                    his work. I would trust Daniel for any job that my dad used
+                    to do for or with me.
+                </blockquote>
+                <p>- Rahadian Supriatna</p>
+            </div>
+        </p>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: black;
+        color: white;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    h2 {
+        font-size: 1.65rem;
+        text-transform: uppercase;
+    }
+    .testimonial {
+        padding: 1rem;
+        border: 1px solid var(--dark);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .testimonial p {
+        text-align: right;
+    }
+    blockquote {
+        line-height: 160%;
+        font-weight: 600;
+    }
+</style>

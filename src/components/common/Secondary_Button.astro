@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+const { href, icon } = Astro.props;
+---
+
+<a href={href}>
+    <Image src={icon} alt="button-icon" />
+    <slot />
+</a>
+
+<style>
+    a {
+        background-color: inherit;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 2px solid var(--gold);
+        border-radius: 6px;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        max-width: fit-content;
+    }
+</style>
