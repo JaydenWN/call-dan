@@ -41,4 +41,33 @@ import placeholder from "@images/placeholder.png";
         width: 100%;
         height: auto;
     }
+
+    @media (min-width: 768px) {
+        h2 {
+            grid-area: title;
+            margin-bottom: 4rem;
+        }
+        .about-image {
+            grid-area: image;
+        }
+        p {
+            grid-area: text-content;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "image text-content";
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 3rem;
+        }
+        .container {
+            gap: 3rem;
+        }
+    }
 </style>

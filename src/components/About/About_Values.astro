@@ -9,7 +9,7 @@ import four from "@icons/four.svg";
 <section>
     <div class="container">
         <h2>What Matters Most at Call Dan</h2>
-        <p>
+        <p class="text-content">
             At Call Dan, we believe that great service begins with strong
             values. Our commitment to honesty, reliability, and quality guides
             everything we do. Every job, from fly screen replacement to welding
@@ -98,5 +98,32 @@ import four from "@icons/four.svg";
     h2 {
         font-size: 1.65rem;
         text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .value-card {
+            box-sizing: border-box;
+            width: calc(50% - 1.5rem);
+        }
+        .values {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+        .text-content {
+            margin-bottom: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 3rem;
+        }
+        .value-card {
+            width: calc(50% - 2rem);
+        }
+        .values {
+            gap: 4rem;
+        }
     }
 </style>

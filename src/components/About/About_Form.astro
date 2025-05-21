@@ -143,4 +143,36 @@ import phoneIcon from "@icons/phone-white.svg";
         flex-direction: column;
         gap: 2rem;
     }
+    @media (min-width: 768px) {
+        form {
+            width: 75%;
+            margin-top: 2rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #contact-heading {
+            font-size: 3rem;
+            grid-area: title;
+        }
+        .intro {
+            grid-area: text-content;
+        }
+        form {
+            grid-area: form;
+            width: 100%;
+            margin-top: 0px;
+        }
+        .contact-direct {
+            grid-area: direct;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "text-content form"
+                "direct form";
+        }
+    }
 </style>

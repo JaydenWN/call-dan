@@ -8,9 +8,9 @@ const { icon, img, title, text, reasons, cta } = Astro.props;
     <Image src={img} alt={title} class="service-img" />
     <div class="text-content">
         <Image src={icon} alt={`${title} icon`} class="service-icon" />
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <ul>
+        <h2 class="title">{title}</h2>
+        <p class="desc">{text}</p>
+        <ul class="reasons">
             {
                 reasons?.map((reason) => (
                     <li>
@@ -20,7 +20,7 @@ const { icon, img, title, text, reasons, cta } = Astro.props;
                 ))
             }
         </ul>
-        <a href="/contact">{cta}</a>
+        <a class="cta" href="/contact">{cta}</a>
     </div>
 </div>
 
@@ -70,5 +70,55 @@ const { icon, img, title, text, reasons, cta } = Astro.props;
         padding: 0.5rem 1rem;
         text-decoration: none;
         max-width: fit-content;
+    }
+    @media (min-width: 768px) {
+        .service-card {
+            width: 70%;
+            margin: 0px auto;
+        }
+        .text-content {
+            padding: 2rem;
+            gap: 2rem;
+        }
+        .service-icon {
+            margin: -95px 0px 2rem 0px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .service-card {
+            width: 660px;
+        }
+        .service-icon {
+            grid-area: service-icon;
+            margin: -80px auto 2rem auto;
+        }
+        .title {
+            grid-area: title;
+            font-size: 3rem;
+        }
+        .desc {
+            grid-area: text-content;
+        }
+        .reasons {
+            grid-area: reasons;
+        }
+        .cta {
+            grid-area: cta;
+        }
+        .text-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "service-icon service-icon"
+                "title title"
+                "text-content reasons"
+                "cta cta";
+        }
+        .service-img {
+            width: 100%;
+            object-fit: cover;
+            height: 300px;
+        }
     }
 </style>

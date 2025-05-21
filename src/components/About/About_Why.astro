@@ -81,4 +81,21 @@ import medal from "@icons/medal.svg";
         border: 1px solid rgba(255, 255, 255, 0.233);
         border-radius: 6px;
     }
+    @media (min-width: 768px) {
+        .why-card {
+            width: calc(50% - 1rem);
+            box-sizing: border-box;
+        }
+        .why-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 3rem;
+        }
+    }
 </style>

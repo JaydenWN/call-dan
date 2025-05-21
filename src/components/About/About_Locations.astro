@@ -59,4 +59,18 @@ import LocationCard from "./Location_Card.astro";
         flex-direction: column;
         gap: 1rem;
     }
+    @media (min-width: 768px) {
+        .locations {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 3rem;
+        }
+    }
 </style>

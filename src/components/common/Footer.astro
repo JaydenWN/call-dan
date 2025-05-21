@@ -24,13 +24,16 @@ const today = new Date();
 				<ul class="site-links">
 					<li>
 						<a href="https://www.facebook.com/calldan2day"
-							>Facebook</a>
+							>Facebook</a
+						>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="footer-end">
-			&copy; {today.getFullYear()} Beachside Web Designs.
+			<a href="https://beachsidewebdesigns.com">
+				&copy; {today.getFullYear()} Beachside Web Designs.
+			</a>
 		</div>
 	</div>
 </footer>
@@ -75,5 +78,17 @@ const today = new Date();
 	.footer-end {
 		margin-top: 2rem;
 		text-align: center;
+	}
+	@media (min-width: 768px) {
+		.footer-container {
+			padding: 4rem 4rem 1rem 4rem;
+		}
+	}
+
+	@media (min-width: 1440px) {
+		.footer-nav {
+			gap: 7rem;
+			margin-top: 7rem;
+		}
 	}
 </style>

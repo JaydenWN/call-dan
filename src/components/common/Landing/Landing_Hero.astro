@@ -9,9 +9,9 @@ import PrimaryButton from "../Primary_Button.astro";
 
 <section class="hero">
     <div class="container">
-        <Image src={icon} alt="logo" />
+        <Image src={icon} alt="logo" class="logo" />
         <h1>South West Sydney's Trusted Local Handyman</h1>
-        <p>
+        <p class="text-content">
             From leaky taps and gutter cleaning to welding and mould removal,
             Call Dan provides friendly and affordable handyman services all
             across Southwest Sydney.
@@ -48,5 +48,46 @@ import PrimaryButton from "../Primary_Button.astro";
     .cta-buttons {
         display: flex;
         gap: 0.5rem;
+    }
+    @media (min-width: 768px) {
+        .hero .container {
+            gap: 4rem;
+        }
+        .logo {
+            align-self: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .logo {
+            grid-area: logo;
+        }
+        .hero h1 {
+            grid-area: title;
+            text-align: left;
+        }
+        .text-content {
+            grid-area: text-content;
+        }
+        .cta-buttons {
+            grid-area: cta-buttons;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "logo title"
+                "logo text-content"
+                "logo cta-buttons";
+            gap: 2rem;
+        }
+        .logo {
+            align-self: flex-start;
+            margin: 0px auto;
+        }
     }
 </style>

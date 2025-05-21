@@ -142,4 +142,42 @@ import phoneIcon from "@icons/phone-white.svg";
         flex-direction: column;
         gap: 2rem;
     }
+
+    @media (min-width: 768px) {
+        form {
+            margin-top: 4rem;
+            width: 75%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 3rem;
+        }
+        .contact-direct {
+            grid-area: contact-info;
+        }
+
+        form {
+            box-sizing: border-box;
+            grid-area: form;
+            margin-top: 0px;
+            width: 100%;
+        }
+        #contact-heading {
+            grid-area: heading;
+        }
+        .intro {
+            grid-area: intro;
+        }
+        .container {
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "heading heading"
+                "intro form"
+                "contact-info form";
+        }
+    }
 </style>

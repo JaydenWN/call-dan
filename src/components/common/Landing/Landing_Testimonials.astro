@@ -1,18 +1,102 @@
 ---
 import LandingTestimonialCard from "./Landing_Testimonial_Card.astro";
+import prevIcon from "@icons/left.svg";
+import nextIcon from "@icons/right.svg";
+import { Image } from "astro:assets";
 ---
 
 <section>
     <div class="container">
         <h2>Testimonials</h2>
-        <LandingTestimonialCard
-            quote="What sets Daniel apart from others is his readiness to assist at a moment’s notice. He is also very efficient in his work. I would trust Daniel for any job that my dad used to do for or with me."
-            quotee="Rahadian Supriatna"
-        />
+    </div>
+
+    <div class="embla">
+        <div class="embla__viewport">
+            <div class="embla__container">
+                <div class="embla__slide">
+                    <LandingTestimonialCard
+                        quote="I recently hired Call Dan for a few maintenance jobs around the house, and I couldn’t be happier with the service! Dan was punctual, professional, and handled each task efficiently, from fixing the leaky tap to repairing some minor wall damage. His attention to detail and quality of work were excellent. If you're looking for a reliable handyman who gets the job done right, I highly recommend Call Dan!"
+                        quotee="Richard Bell"
+                    />
+                </div>
+                <div class="embla__slide">
+                    <LandingTestimonialCard
+                        quote="What sets Daniel apart from others is his readiness to assist at a moment’s notice. He is also very efficient in his work. I would trust Daniel for any job that my dad used to do for or with me."
+                        quotee="Rahadian Supriatna"
+                    />
+                </div>
+                <div class="embla__slide">
+                    <LandingTestimonialCard
+                        quote="Dan is the best for any handyman job. He is accurate, quick, clean and helpful. Thank you so much"
+                        quotee="Lucy Mi"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div class="embla__buttons">
+            <button class="embla__button embla__button--prev" disabled
+                ><Image src={prevIcon} alt="prev" class="btn-icon" />
+            </button>
+            <button class="embla__button embla__button--next">
+                <Image src={nextIcon} alt="next" class="btn-icon" />
+            </button>
+        </div>
     </div>
 </section>
 
 <style>
+    .embla {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .embla__viewport {
+        overflow: hidden;
+        width: 100%;
+    }
+    .embla__container {
+        display: flex;
+    }
+    .embla__slide {
+        position: relative;
+        min-width: 100%;
+    }
+    .embla__slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .embla__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    .embla__button {
+        padding: 1rem;
+        background: var(--gold);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .embla__button:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .btn-icon {
+        width: 15px;
+        height: auto;
+    }
     section {
         background-color: var(--dark);
     }
@@ -27,4 +111,34 @@ import LandingTestimonialCard from "./Landing_Testimonial_Card.astro";
         flex-direction: column;
         gap: 2rem;
     }
+
+    @media (min-width: 1024px) {
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
 </style>
+
+<script>
+    import EmblaCarousel from "embla-carousel";
+    document.addEventListener("DOMContentLoaded", () => {
+        const viewport = document.querySelector(".embla__viewport");
+        const embla = EmblaCarousel(viewport, { loop: false });
+
+        const prevBtn = document.querySelector(".embla__button--prev");
+        const nextBtn = document.querySelector(".embla__button--next");
+
+        const updateButtons = () => {
+            prevBtn.disabled = !embla.canScrollPrev();
+            nextBtn.disabled = !embla.canScrollNext();
+        };
+
+        prevBtn.addEventListener("click", () => embla.scrollPrev());
+        nextBtn.addEventListener("click", () => embla.scrollNext());
+
+        embla.on("select", updateButtons);
+        // initialize button states
+        updateButtons();
+    });
+</script>

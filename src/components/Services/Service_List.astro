@@ -6,28 +6,34 @@ import FlyIcon from "@icons/fly-screen-white.svg";
 import WeldIcon from "@icons/welding-white.svg";
 import GutterIcon from "@icons/gutter-cleaning-white.svg";
 import placeholder from "@images/placeholder.png";
+
+import MoldImage from "@images/sydney-mold-removal.webp";
+import WindowImage from "@images/sydney-handyman-window-clean.webp";
+import FlyImage from "@images/sydney-handyman-fly-screen-replacement.png";
+import WeldImage from "@images/sydney-handyman-welding.webp";
+import GutterImage from "@images/handyman-gutter-cleaning-sydney.png";
 ---
 
 <section class="service-list">
     <div class="container">
         <ServiceCard
             icon={MouldIcon}
-            img={placeholder}
-            title="Mould Removal"
-            text="Mould doesn't just look unsightly, it can affect your health and damage your property. Call Dan for effective mould removal services that leave your home clean, fresh, and safe for your family."
+            img={MoldImage}
+            title="Mold Removal"
+            text="Mold doesn't just look unsightly, it can affect your health and damage your property. Call Dan for effective mould removal services that leave your home clean, fresh, and safe for your family."
             reasons={[
                 "Fast, thorough mould treatment",
                 "Safe, family friendly methods",
                 "Protect your health and property",
                 "Local and reliable handyman",
             ]}
-            cta="Request a Mould Removal Quote"
+            cta="Request a Mold Removal Quote"
         />
     </div>
     <div class="container">
         <ServiceCard
             icon={WindowIcon}
-            img={placeholder}
+            img={WindowImage}
             title="Window Cleaning"
             text="Sparkling clean windows make a huge difference to the appearance of your home or office. Call Dan provides professional window cleaning services for spotless, streak free results every time."
             reasons={[
@@ -43,7 +49,7 @@ import placeholder from "@images/placeholder.png";
     <div class="container">
         <ServiceCard
             icon={WeldIcon}
-            img={placeholder}
+            img={WeldImage}
             title="Welding"
             text="Need reliable welding repairs around your home or commercial space? Call Dan handles welding tasks quickly, safely, and professionally, ensuring structural integrity and peace of mind."
             reasons={[
@@ -59,7 +65,7 @@ import placeholder from "@images/placeholder.png";
     <div class="container">
         <ServiceCard
             icon={FlyIcon}
-            img={placeholder}
+            img={FlyImage}
             title="Fly Screen Replacement"
             text="Sparkling clean windows make a huge difference to the appearance of your home or office. Call Dan provides professional window cleaning services for spotless, streak free results every time."
             reasons={[
@@ -75,7 +81,7 @@ import placeholder from "@images/placeholder.png";
     <div class="container">
         <ServiceCard
             icon={GutterIcon}
-            img={placeholder}
+            img={GutterImage}
             title="Gutter Cleaning"
             text="Blocked gutters can lead to costly water damage and leaks. Call Dan provides reliable gutter cleaning to keep your home protected and your gutters flowing freely."
             reasons={[
@@ -92,5 +98,10 @@ import placeholder from "@images/placeholder.png";
 <style>
     .service-list .container:nth-of-type(even) {
         background-color: var(--dark);
+    }
+    @media (min-width: 1440px) {
+        .service-list .container:nth-of-type(even) {
+            background-color: inherit;
+        }
     }
 </style>

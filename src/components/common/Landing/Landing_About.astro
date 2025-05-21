@@ -5,8 +5,8 @@ import placeholder from "@images/placeholder.png";
 
 <section class="about">
     <div class="container">
-        <h2>About Call Dan</h2>
-        <p>
+        <h2 class="title">About Call Dan</h2>
+        <p class="text">
             At Call Dan, we provide reliable handyman services to homeowners and
             businesses right across South West Sydney. Whether you need window
             cleaning, fly screen replacement or repairs around the house, Dan is
@@ -34,5 +34,30 @@ import placeholder from "@images/placeholder.png";
     .about-image {
         width: 100%;
         height: auto;
+    }
+    @media (min-width: 768px) {
+        .title {
+            grid-area: title;
+        }
+        .text {
+            grid-area: text;
+        }
+        .about-image {
+            grid-area: image;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "title title"
+                "image text";
+            gap: 4rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .title {
+            font-size: 3rem;
+        }
     }
 </style>
