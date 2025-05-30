@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://call-dan.com.au",
+	site: "https://calldan.com.au",
 	integrations: [mdx(), sitemap()],
 	vite: {
 		resolve: {
