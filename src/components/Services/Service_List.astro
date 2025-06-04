@@ -5,13 +5,16 @@ import WindowIcon from "@icons/window-cleaning-white.svg";
 import FlyIcon from "@icons/fly-screen-white.svg";
 import WeldIcon from "@icons/welding-white.svg";
 import GutterIcon from "@icons/gutter-cleaning-white.svg";
-import placeholder from "@images/placeholder.png";
+import eolIcon from "@icons/end-of-lease-cleans-black.svg";
+import pressureIcon from "@icons/pressure-washing-black.svg";
 
 import MoldImage from "@images/sydney-mold-removal.webp";
 import WindowImage from "@images/sydney-handyman-window-clean.webp";
 import FlyImage from "@images/sydney-handyman-fly-screen-replacement.png";
 import WeldImage from "@images/sydney-handyman-welding.webp";
 import GutterImage from "@images/handyman-gutter-cleaning-sydney.png";
+import pressureImage from "@images/pressure-washing-sydney.png";
+import eolCleanImage from "@images/end-of-lease-clean.png";
 ---
 
 <section class="service-list">
@@ -89,6 +92,38 @@ import GutterImage from "@images/handyman-gutter-cleaning-sydney.png";
                 "Protect your roof and property",
                 "Quick, hassle free service",
                 "Local handyman you can trust",
+            ]}
+            cta="Get a quote now"
+        />
+    </div>
+
+    <div class="container">
+        <ServiceCard
+            icon={eolIcon}
+            img={eolCleanImage}
+            title="End of Lease Cleaning"
+            text="Moving out? Make sure you leave your place spotless and stress free. Call Dan offers thorough end of lease cleans to help you get your full bond back with no fuss."
+            reasons={[
+                "Professional standard cleaning",
+                "Every corner left sparkling",
+                "Reliable and efficient team",
+                "Great value for local renters",
+            ]}
+            cta="Get a quote now"
+        />
+    </div>
+
+    <div class="container">
+        <ServiceCard
+            icon={pressureIcon}
+            img={pressureImage}
+            title="Pressure Washing"
+            text="Built-up grime and dirt can make your surfaces look tired and worn. Call Dan delivers powerful pressure washing services that leave driveways, paths, and outdoor areas looking fresh and clean."
+            reasons={[
+                "High pressure deep cleaning",
+                "Perfect for concrete brick and stone",
+                "Fast and effective results",
+                "Affordable service across South West Sydney",
             ]}
             cta="Get a quote now"
         />
